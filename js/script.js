@@ -1,9 +1,9 @@
 // ===== STATE =====
-let todos = JSON.parse(localStorage.getItem('yama-todos') || '[]');
+let todos = JSON.parse(localStorage.getItem('peto-todos') || '[]');
 let currentFilter = 'all';
 
 // ===== THEME =====
-const savedTheme = localStorage.getItem('yama-theme') || 'light';
+const savedTheme = localStorage.getItem('peto-theme') || 'light';
 document.documentElement.setAttribute('data-theme', savedTheme);
 updateThemeUI(savedTheme);
 
@@ -11,7 +11,7 @@ function toggleTheme() {
   const current = document.documentElement.getAttribute('data-theme');
   const next = current === 'light' ? 'dark' : 'light';
   document.documentElement.setAttribute('data-theme', next);
-  localStorage.setItem('yama-theme', next);
+  localStorage.setItem('peto-theme', next);
   updateThemeUI(next);
 }
 
@@ -29,7 +29,7 @@ function updateThemeUI(theme) {
 
 // ===== SAVE TO LOCALSTORAGE =====
 function save() {
-  localStorage.setItem('yama-todos', JSON.stringify(todos));
+  localStorage.setItem('peto-todos', JSON.stringify(todos));
 }
 
 // ===== ADD TODO =====
