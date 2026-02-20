@@ -40,7 +40,7 @@ function addTodo() {
   const date      = dateInput.value;
 
   if (!text || !date) {
-    showToast('⚠️ Isi todo dan pilih tanggal terlebih dahulu!');
+    showToast('⚠️ Isi tugas dan pilih tanggal terlebih dahulu!');
     return;
   }
 
@@ -55,7 +55,7 @@ function addTodo() {
   dateInput.value = '';
   save();
   displayTodos();
-  showToast('✅ Todo berhasil ditambahkan!');
+  showToast('✅ Tugas berhasil ditambahkan!');
   input.focus();
 }
 
@@ -84,14 +84,14 @@ function deleteTodo(id) {
 // ===== DELETE ALL TODOS =====
 function deleteAllTodo() {
   if (todos.length === 0) {
-    showToast('Tidak ada todo untuk dihapus.');
+    showToast('Tidak ada tugas untuk dihapus.');
     return;
   }
-  if (!confirm('Yakin ingin menghapus semua todo?')) return;
+  if (!confirm('Yakin ingin menghapus semua tugas?')) return;
   todos = [];
   save();
   displayTodos();
-  showToast('🗑️ Semua todo dihapus.');
+  showToast('🗑️ Semua tugas dihapus.');
 }
 
 // ===== SET FILTER =====
@@ -125,10 +125,10 @@ function displayTodos() {
   // Empty state
   if (filtered.length === 0) {
     const msg = currentFilter === 'done'
-      ? '😊 Belum ada todo yang selesai.'
+      ? '😊 Belum ada tugas yang selesai!.'
       : currentFilter === 'active'
-      ? '🎉 Semua todo sudah selesai!'
-      : '📋 Belum ada todo. Tambahkan sekarang!';
+      ? '🎉 Belum ada tugas yang di ambil!'
+      : '📋 Belum ada tugas, Tambahkan sekarang!';
     list.innerHTML = `<li class="empty-state"><span class="emoji"></span>${msg}</li>`;
     return;
   }

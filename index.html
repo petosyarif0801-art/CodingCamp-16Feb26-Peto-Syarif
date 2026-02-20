@@ -44,7 +44,7 @@
               </svg>
               todo
             </label>
-            <input type="text" id="todo-input" placeholder="Tambahkan todo baru…" onkeydown="handleEnter(event)" />
+            <input type="text" id="todo-input" placeholder="Tambahkan Tugas Baru…" onkeydown="handleEnter(event)" />
           </div>
           <div class="form-group">
             <!-- Icon: calendar -->
@@ -65,7 +65,7 @@
             <line x1="12" y1="5" x2="12" y2="19"/>
             <line x1="5" y1="12" x2="19" y2="12"/>
           </svg>
-          Tambah Todo
+          Tambah Tugas
         </button>
       </div>
     </div>
@@ -83,7 +83,7 @@
             <line x1="3" y1="12" x2="3.01" y2="12"/>
             <line x1="3" y1="18" x2="3.01" y2="18"/>
           </svg>
-          Semua
+        List
         </button>
         <!-- Aktif: clock icon -->
         <button class="btn btn-ghost" id="filter-active" onclick="setFilter('active')">
@@ -127,7 +127,7 @@
       <ul id="todo-list">
         <li class="empty-state">
           <span class="emoji">📋</span>
-          Belum ada todo. Tambahkan sekarang!
+          Belum ada tugas. Tambahkan sekarang!
         </li>
       </ul>
       <div class="stats" id="stats" style="display:none;">
